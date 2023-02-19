@@ -1,9 +1,9 @@
-start = int(input("Write starting point: "))
-end = int(input("Write ending point: "))
-sq_numbers = [i*i for i in range(start,end)]
+def squares(a, b):
+    for i in range(a, b):
+        yield i ** 2
 
-#test
-for i in sq_numbers:
-    for j in range(start,end):
-        if i/2 == j:
-            print(i)
+
+s = squares(int(input()), int(input()))
+
+for i in s:
+    print(i)  # i is yielded value
